@@ -40,7 +40,7 @@ print(len(params))
 print(params[0].size())
 
 
-input = torch.randn(1, 1, 32, 32)
+input = torch.randn(1, 1, 32, 32)    # Dimensions of 4 d
 out = net(input)
 print(out)
 
