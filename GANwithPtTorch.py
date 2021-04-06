@@ -55,7 +55,7 @@ for i in range(10000):
     real = torch.tensor(p_data(X)).float()   # 这里给一个BATCH_SIZE是列；行表示数据的变化，和X的维度一样。
     # print(real.data.numpy())
     idea = torch.randn(BATCH_SIZE, IDEA)    # 噪声的第二维度和生成器G的输入相等
-    fake = G(idea)
+    fake = G(idea)    # dim of output is same to the D input
 
     prob_fake = D(fake)
     G_loss = torch.mean(torch.log(torch.tensor(1) - prob_fake))
